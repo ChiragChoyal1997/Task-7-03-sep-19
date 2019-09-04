@@ -17,13 +17,7 @@ public class CreateOperation {
                     + "sal float"
                     + ")";
             Statement stmt = con.createStatement();
-            boolean tablecreated = stmt.execute(sql);
-            if(tablecreated){
-                System.out.println("Table has been created");
-            }
-            else{
-                System.out.println("Table is not created/exists already");
-            }
+            stmt.execute(sql);
         } catch (ClassNotFoundException | SQLException ex) {
             ex.printStackTrace();
         }
